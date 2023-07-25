@@ -1,7 +1,7 @@
 # Личный проект «Кэт энерджи»
 
 * Студент: [Aleksandr  Ilyukhin](https://up.htmlacademy.ru/adaptive/29/user/825295).
-* Наставник: `Неизвестно`.
+* Наставник: `[Ольга Ветер]`(https://htmlacademy.ru/profile/id73199).
 
 ---
 
