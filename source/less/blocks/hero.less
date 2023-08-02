@@ -1,0 +1,55 @@
+.hero {
+  width: 320px;
+  position: relative;
+  &::before {
+    content: "";
+    position: absolute;
+    bottom: 27px;
+    left: 0;
+    width: 280px;
+    height: 270px;
+    background-image: url("../../img/hero-background-chicken.png");
+  }
+}
+
+.hero__content-wrapper {
+  background-image: url("../../img/hero-background.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 27px 36px 164px 36px;
+  margin-bottom: 138px;
+}
+
+.hero__title {
+  text-align: center;
+  font-size: 36px;
+  font-weight: 400;
+  line-height: 36px;
+  color: #ffffff;
+  margin: 0;
+  margin-bottom: 25px;
+}
+
+.hero__description {
+  margin: 0;
+  margin-bottom: 29px;
+  color: #ffffff;
+  font-size: 14px;
+  line-height: 14px;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.hero__link {
+  text-decoration: none;
+  color: #ffffff;
+  background: #68b738;
+  text-align: center;
+  font-style: normal;
+  text-transform: uppercase;
+  padding: 8px 44px;
+  display: block;
+  margin: 0 auto;
+  width: 280px;
+  box-sizing: border-box;
+}
