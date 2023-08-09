@@ -1,0 +1,35 @@
+.additional-card {
+  border-top: 1px solid #cdcdcd;
+  border-bottom: 1px solid #cdcdcd;
+  padding: 13px 0 19px 0;
+
+  @media (min-width: @tablet-width) {
+    border: 1px solid#cdcdcd;
+    padding: 26px 40px 28px 38px;
+  }
+
+  @media (min-width: @desktop-width) {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+
+.additional-card__title {
+  margin: 0 0 13px 0;
+  color: #222222;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 16px;
+  text-transform: uppercase;
+}
+
+.additional-card__text {
+  font-family: "Lato", "Arial", sans-serif;
+  line-height: 14px;
+}
+
+.additional-card__wrapper {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px;
+}

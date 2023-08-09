@@ -1,0 +1,151 @@
+.features__wrapper {
+  @media (min-width: @tablet-width) {
+    padding: 0 79px 47px 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 0 0 0 0;
+  }
+}
+
+.features__title {
+  margin: 0;
+  margin-bottom: 42px;
+  color: #000000;
+  font-size: 36px;
+  font-weight: 400;
+  line-height: 40px;
+}
+
+.features__list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  gap: 26px;
+
+  @media (min-width: @tablet-width) {
+    gap: 153px;
+  }
+
+  @media (min-width: @desktop-width) {
+    flex-direction: row;
+    gap: 94px;
+  }
+}
+
+.features__item {
+  font-family: "Lato", "Arial", sans-serif;
+  padding: 0 0 6px 80px;
+  position: relative;
+
+  @media (min-width: @tablet-width) {
+    padding: 151px 0 0 0;
+  }
+}
+
+.features__item--leaf::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 60px;
+  height: 60px;
+  background-color: #68b738;
+  background-image: url("../img/leaf-icon.svg");
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+
+  @media (min-width: @tablet-width) {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 80px;
+    height: 80px;
+    background-color: #68b738;
+    background-image: url("../img/leaf-icon.svg");
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+  }
+}
+
+.features__item--powder::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 60px;
+  height: 60px;
+  background-color: #68b738;
+  background-image: url("../img/powder-icon.svg");
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+
+  @media (min-width: @tablet-width) {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 80px;
+    height: 80px;
+    background-color: #68b738;
+    background-image: url("../img/powder-icon.svg");
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+  }
+}
+
+.features__item--eat::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 60px;
+  height: 60px;
+  background-color: #68b738;
+  background-image: url("../img/eat-icon.svg");
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+
+  @media (min-width: @tablet-width) {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 80px;
+    height: 80px;
+    background-color: #68b738;
+    background-image: url("../img/eat-icon.svg");
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+  }
+}
+
+.features__item--clock::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 60px;
+  height: 60px;
+  background-color: #68b738;
+  background-image: url("../img/clock-icon.svg");
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+
+  @media (min-width: @tablet-width) {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 80px;
+    height: 80px;
+    background-color: #68b738;
+    background-image: url("../img/clock-icon.svg");
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+  }
+}
