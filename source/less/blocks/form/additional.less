@@ -1,0 +1,38 @@
+.additional__title {
+  margin-bottom: 36px;
+}
+
+.additional__list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+
+  @media (min-width: @desktop-width) {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+
+.additional__item {
+  @media (min-width: @desktop-width) {
+    width: 221px;
+  }
+}
+
+.additional__label {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 17px;
+  font-size: 16px;
+  text-transform: uppercase;
+}
+
+.additional__input:checked + .custom-checkbox {
+  background-image: url("../../../img/checkmark-icon.svg");
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+}

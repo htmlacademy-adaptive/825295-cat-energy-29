@@ -1,0 +1,83 @@
+.weight {
+  background-color: #f2f2f2;
+
+  @media (min-width: @desktop-width) {
+    width: 570px;
+  }
+}
+
+.weight__wrapper {
+  position: relative;
+
+  @media (min-width: @tablet-width) {
+    padding: 77px 491px 53px 52px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 77px 61px 55px 52px;
+    width: 100%;
+  }
+}
+
+.weight__title {
+  margin: 0;
+  margin-bottom: 29px;
+  padding-left: 91px;
+  color: #000000;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 37px;
+  text-transform: uppercase;
+  position: relative;
+}
+
+.weight__title--loss::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50px;
+  height: 54px;
+  background-image: url("../img/cat-loss.svg");
+  background-repeat: no-repeat;
+}
+
+.weight__title--gain::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 70px;
+  height: 54px;
+  background-image: url("../img/cat-gain.svg");
+  background-repeat: no-repeat;
+}
+
+.weight__description {
+  margin: 0;
+  margin-bottom: 15px;
+  padding-bottom: 23px;
+  border-bottom: 1px solid #d9d9d9;
+}
+
+.weight__link {
+  color: #000000;
+  text-align: center;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 16px;
+  text-transform: uppercase;
+  position: relative;
+  padding-right: 39px;
+}
+
+.weight__link::after {
+  content: "";
+  position: absolute;
+  top: 6px;
+  right: 0;
+  width: 24px;
+  height: 12px;
+  background-image: url("../../../img/weight-arrow.svg");
+  background-repeat: no-repeat;
+}

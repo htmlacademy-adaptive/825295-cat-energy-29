@@ -1,12 +1,24 @@
 .partnership {
-  width: 320px;
+  position: relative;
 }
 
 .partnership__wrapper {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  padding: 26px 20px;
+  padding: 26px 0;
+
+  @media (min-width: @tablet-width) {
+    padding: 60px 40px;
+  }
+
+  @media (min-width: @desktop-width) {
+    min-width: 565px;
+    padding: 60px 78px 60px 80px;
+    position: absolute;
+    top: 95px;
+    left: 110px;
+  }
 }
 
 .partnership__title {
