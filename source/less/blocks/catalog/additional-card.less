@@ -1,16 +1,20 @@
 .additional-card {
   border-top: 1px solid #cdcdcd;
-  border-bottom: 1px solid #cdcdcd;
   padding: 13px 0 19px 0;
 
   @media (min-width: @tablet-width) {
     border: 1px solid#cdcdcd;
+    border-bottom: none;
     padding: 26px 40px 28px 38px;
   }
 
   @media (min-width: @desktop-width) {
     display: flex;
     flex-wrap: wrap;
+  }
+
+  &:last-of-type {
+    border-bottom: 1px solid #cdcdcd;
   }
 }
 

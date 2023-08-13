@@ -15,6 +15,12 @@
   font-size: 36px;
   font-weight: 400;
   line-height: 40px;
+
+  @media (min-width: @tablet-width) {
+    font-size: 60px;
+    line-height: 60px;
+    margin-bottom: 72px;
+  }
 }
 
 .features__list {
@@ -27,12 +33,16 @@
   gap: 26px;
 
   @media (min-width: @tablet-width) {
-    gap: 153px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 153px;
+    row-gap: 77px;
+    counter-set: counter;
   }
 
   @media (min-width: @desktop-width) {
-    flex-direction: row;
-    gap: 94px;
+    column-gap: 94px;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
   }
 }
 
@@ -42,7 +52,22 @@
   position: relative;
 
   @media (min-width: @tablet-width) {
-    padding: 151px 0 0 0;
+    padding: 151px 26px 57px 0;
+
+    &::after {
+      counter-increment: counter;
+      content: counter(counter);
+      position: absolute;
+      top: 0;
+      right: 0;
+      color: #f2f2f2;
+      text-align: center;
+      font-size: 280px;
+      line-height: 280px;
+      z-index: -1;
+      width: 112px;
+      height: 280px;
+    }
   }
 }
 
@@ -61,7 +86,7 @@
   @media (min-width: @tablet-width) {
     content: "";
     position: absolute;
-    top: 0;
+    top: 40px;
     left: 0;
     width: 80px;
     height: 80px;
@@ -87,7 +112,7 @@
   @media (min-width: @tablet-width) {
     content: "";
     position: absolute;
-    top: 0;
+    top: 40px;
     left: 0;
     width: 80px;
     height: 80px;
@@ -113,7 +138,7 @@
   @media (min-width: @tablet-width) {
     content: "";
     position: absolute;
-    top: 0;
+    top: 40px;
     left: 0;
     width: 80px;
     height: 80px;
@@ -139,7 +164,7 @@
   @media (min-width: @tablet-width) {
     content: "";
     position: absolute;
-    top: 0;
+    top: 40px;
     left: 0;
     width: 80px;
     height: 80px;
