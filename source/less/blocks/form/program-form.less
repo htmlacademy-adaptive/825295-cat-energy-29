@@ -168,9 +168,8 @@
 }
 
 .program-form__title {
-  margin: 0;
-  margin-bottom: 11px;
-  padding: 0;
+  margin: 0 0 11px 0;
+  padding: 0 20px 0 0;
   color: #000000;
   font-size: 24px;
   font-weight: 400;
@@ -180,47 +179,21 @@
 
 .program-form__title--contacts {
   margin: 0 0 35px 0;
-  padding: 26px 93px 0 0;
+  position: relative;
 
-  &::before {
-    content: "";
-    position: absolute;
-    top: 50%;
-    right: -20px;
-    min-width: 93px;
-    height: 2px;
-    background-color: #68b738;
+  @media (min-width: @tablet-width) {
+    br {
+      display: none;
+    }
   }
 }
 
 .program-form__title--comment {
   margin-bottom: 38px;
-  padding-right: 159px;
-
-  &::before {
-    content: "";
-    position: absolute;
-    top: 50%;
-    right: -20px;
-    min-width: 159px;
-    height: 2px;
-    background-color: #68b738;
-  }
 }
 
 .program-form__title--additional {
   margin-bottom: 38px;
-  padding-right: 139px;
-
-  &::before {
-    content: "";
-    position: absolute;
-    top: 50%;
-    right: -20px;
-    min-width: 139px;
-    height: 2px;
-    background-color: #68b738;
-  }
 }
 
 .program-form__request-wrapper {

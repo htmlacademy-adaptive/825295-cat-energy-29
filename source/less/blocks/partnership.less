@@ -13,11 +13,12 @@
   }
 
   @media (min-width: @desktop-width) {
-    min-width: 565px;
+    width: 565px;
     padding: 60px 78px 60px 80px;
     position: absolute;
     top: 95px;
     left: 110px;
+    background-color: #ffffff;
   }
 }
 
@@ -28,10 +29,21 @@
   font-weight: 400;
   line-height: 20px;
   text-transform: uppercase;
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: 26px;
+  }
 }
 
 .partnership__address {
   font-family: "Lato", sans-serif;
   font-style: normal;
   line-height: 20px;
+
+  @media (min-width: @tablet-width) {
+    font-size: 16px;
+    line-height: 20px;
+    text-align: right;
+  }
 }

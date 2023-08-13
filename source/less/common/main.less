@@ -15,7 +15,7 @@
 
   @media (min-width: @desktop-width) {
     display: inline-block;
-    margin: 0 80px 71px 110px;
+    margin: 0;
   }
 }
 
@@ -29,8 +29,23 @@
   }
 }
 
+.main__weight-container {
+  @media (min-width: @desktop-width) {
+    width: calc(100% - 220px);
+    max-width: 1440px;
+    margin: 0 auto 71px auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 80px;
+  }
+}
+
 .main__features {
   margin: 0 0 49px 0;
+
+  @media (min-width: @tablet-width) {
+    margin: 0;
+  }
 
   @media (min-width: @desktop-width) {
     margin: 0 0 69px 0;

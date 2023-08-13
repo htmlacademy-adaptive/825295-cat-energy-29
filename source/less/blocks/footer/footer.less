@@ -1,6 +1,7 @@
 .footer {
   min-width: 320px;
   margin-top: auto;
+  background-color: #f2f2f2;
 }
 
 .footer__wrapper {
@@ -10,7 +11,7 @@
     padding: 55px 0;
     display: flex;
     flex-wrap: wrap;
-    align-items: center;
+    align-items: flex-start;
     justify-content: space-between;
   }
 
@@ -30,14 +31,10 @@
 }
 
 .footer__social {
-  border-top: 1px solid #d9d9d9;
-  border-bottom: 1px solid #d9d9d9;
-  padding: 20px 74px;
   margin-bottom: 20px;
 
   @media (min-width: @tablet-width) {
     border: none;
-    padding: 0;
-    margin: 0;
+    margin-bottom: 0;
   }
 }

@@ -56,9 +56,35 @@
 
 .catalog__buttons-wrapper {
   padding: 25px 0 25px 0;
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: -20px;
+    top: 0;
+    height: 1px;
+    width: calc(100% + 40px);
+    background-color: #ebebeb;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    left: -20px;
+    bottom: 0;
+    height: 1px;
+    width: calc(100% + 40px);
+    background-color: #ebebeb;
+  }
 
   @media (min-width: @tablet-width) {
     padding: 50px 37px 40px 37px;
     border: 1px solid #ebebeb;
+
+    &::before,
+    &::after {
+      display: none;
+    }
   }
 }

@@ -8,15 +8,14 @@
   }
 
   @media (min-width: @desktop-width) {
-
     &::before {
       content: "";
       position: absolute;
-      top: 146px;
-      right: 221px;
-      width: 552px;
-      height: 499px;
-      background-image: url("../img/hero-background-chicken-desktop.png");
+      top: 0;
+      right: 0;
+      min-width: 720px;
+      height: 694px;
+      background-image: url("../img/hero-background-desktop.png");
       background-repeat: no-repeat;
     }
   }
@@ -30,26 +29,23 @@
     content: "";
     position: absolute;
     bottom: 43px;
-    left: 0;
+    left: 50%;
+    transform: translateX(-50%);
     width: 280px;
     height: 270px;
     background-image: url("../img/hero-background-chicken.png");
     background-repeat: no-repeat;
-    z-index: -1;
+    z-index: 1;
   }
 
   @media (min-width: @tablet-width) {
-    padding: 80px 204px 630px 90px;
+    padding: 80px 202px 630px 90px;
 
     &::before {
-      content: "";
-      position: absolute;
       bottom: 0;
-      left: 0;
       width: 709px;
       height: 609px;
       background-image: url("../img/hero-background-chicken-tablet.png");
-      background-repeat: no-repeat;
     }
   }
 
@@ -58,7 +54,14 @@
     min-height: 580px;
 
     &::before {
-      display: none;
+      content: "";
+      position: absolute;
+      top: 146px;
+      right: 221px;
+      width: 552px;
+      height: 499px;
+      background-image: url("../img/hero-background-chicken-desktop.png");
+      background-repeat: no-repeat;
     }
   }
 }
@@ -74,6 +77,10 @@
 
   @media (min-width: @tablet-width) {
     color: #000000;
+    font-size: 60px;
+    line-height: 60px;
+    margin-bottom: 40px;
+    text-align: left;
   }
 }
 
@@ -88,6 +95,9 @@
   @media (min-width: @tablet-width) {
     color: #000000;
     margin: 0 0 50px 0;
+    font-size: 20px;
+    line-height: 20px;
+    text-align: left;
   }
 }
 
@@ -99,7 +109,15 @@
   font-style: normal;
   text-transform: uppercase;
   padding: 8px 44px;
-  width: 280px;
+  min-width: 280px;
   display: block;
   margin: 0 auto;
+
+  @media (min-width: @tablet-width) {
+    width: 244px;
+    padding: 14px 26px;
+    font-size: 20px;
+    line-height: 20px;
+    margin: 0;
+  }
 }
