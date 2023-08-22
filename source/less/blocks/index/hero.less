@@ -1,23 +1,16 @@
 .hero {
-  background: url("../img/hero-background.png"), linear-gradient(#68b738 63%, #ffffff 63%);
-  background-size: 100% 63%;
+  background: linear-gradient(to top, #ffffff 180px, rgba(104, 183, 56, 0.85) 180px, rgba(104, 183, 56, 0.85) 100%), url("../img/hero-bg.png");
+  background-size: 100% auto;
   background-repeat: no-repeat;
+
+  @media (min-resolution: 2dppx) {
+    background: linear-gradient(to top, #ffffff 180px, rgba(104, 183, 56, 0.85) 180px, rgba(104, 183, 56, 0.85) 100%), url("../img/hero-bg@2x.png");
+    background-repeat: no-repeat;
+    background-size: 320px auto;
+  }
 
   @media (min-width: @tablet-width) {
     background: none;
-  }
-
-  @media (min-width: @desktop-width) {
-    &::before {
-      content: "";
-      position: absolute;
-      top: 0;
-      right: 0;
-      min-width: 720px;
-      height: 694px;
-      background-image: url("../img/hero-background-desktop.png");
-      background-repeat: no-repeat;
-    }
   }
 }
 
@@ -33,9 +26,14 @@
     transform: translateX(-50%);
     width: 280px;
     height: 270px;
-    background-image: url("../img/hero-background-chicken.png");
+    background-image: url("../img/hero-chicken-mobile.png");
     background-repeat: no-repeat;
     z-index: 1;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/hero-chicken-mobile@2x.png");
+      background-size: 280px auto;
+    }
   }
 
   @media (min-width: @tablet-width) {
@@ -45,23 +43,30 @@
       bottom: 0;
       width: 709px;
       height: 609px;
-      background-image: url("../img/hero-background-chicken-tablet.png");
+      background-image: url("../img/hero-chicken-tablet.png");
+
+      @media (min-resolution: 2dppx) {
+        background-image: url("../img/hero-chicken-tablet@2x.png");
+        background-size: 709px auto;
+      }
     }
   }
 
   @media (min-width: @desktop-width) {
-    padding: 110px 726px 184px 80px;
+    padding: 110px 722px 193px 80px;
     min-height: 580px;
 
     &::before {
-      content: "";
-      position: absolute;
       top: 146px;
       right: 221px;
       width: 552px;
       height: 499px;
-      background-image: url("../img/hero-background-chicken-desktop.png");
-      background-repeat: no-repeat;
+      background-image: url("../img/hero-chicken-desktop.png");
+
+      @media (min-resolution: 2dppx) {
+        background-image: url("../img/hero-chicken-desktop@2x.png");
+        background-size: 552px auto;
+      }
     }
   }
 }

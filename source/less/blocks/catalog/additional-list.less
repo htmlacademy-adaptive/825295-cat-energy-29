@@ -1,0 +1,18 @@
+.additional-list {
+  @media (min-width: @desktop-width) {
+    display: grid;
+    grid-template-columns: 1fr 245px;
+    gap: 80px;
+  }
+}
+
+.additional-list__button {
+  @media (min-width: @tablet-width) {
+    margin-top: 70px;
+  }
+
+  @media (min-width: @desktop-width) {
+    grid-column: 2 / 3;
+    margin-top: 0;
+  }
+}

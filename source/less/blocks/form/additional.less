@@ -1,5 +1,9 @@
 .additional__title {
   margin-bottom: 36px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 57px;
+  }
 }
 
 .additional__list {
@@ -7,12 +11,20 @@
   padding: 0;
   list-style-type: none;
   display: flex;
+  flex-wrap: wrap;
   flex-direction: column;
   gap: 15px;
 
+  @media (min-width: @tablet-width) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 32px 123px;
+  }
+
   @media (min-width: @desktop-width) {
     display: flex;
-    flex-wrap: wrap;
+    gap: 32px 104px;
+    flex-direction: row;
   }
 }
 
@@ -31,8 +43,6 @@
   text-transform: uppercase;
 }
 
-.additional__input:checked + .custom-checkbox {
-  background-image: url("../../../img/checkmark-icon.svg");
-  background-repeat: no-repeat;
-  background-position: 50% 50%;
+.additional__input:checked + .custom-checkbox::before {
+  display: block;
 }

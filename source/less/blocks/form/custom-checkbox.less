@@ -1,6 +1,25 @@
 .custom-checkbox {
-  width: 26px;
-  height: 26px;
+  width: 30px;
+  height: 30px;
   border: 1px solid #cdcdcd;
   display: inline-block;
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 8px;
+    left: 6px;
+    width: 18px;
+    height: 14px;
+    border-left: 2px solid #68b738;
+    border-bottom: 2px solid #68b738;
+    transform: rotate(-45deg);
+    display: none;
+  }
+
+  @media (min-width: @tablet-width) {
+    width: 40px;
+    height: 40px;
+  }
 }
