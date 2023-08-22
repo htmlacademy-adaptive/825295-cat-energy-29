@@ -2,5 +2,31 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 14px 36px 12px 36px;
+  width: 140px;
+  height: 107px;
+  margin: 0 auto;
+
+  @media (min-width: @tablet-width) {
+    height: 210px;
+    width: 200px;
+  }
+
+  @media (min-width: @desktop-width) {
+    height: 210px;
+    width: 169px;
+  }
+}
+
+.product-link__image {
+  object-fit: scale-down;
+
+  @media (min-width: @tablet-width) {
+    width: 200px;
+    height: 210px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 169px;
+    height: 210px;
+  }
 }

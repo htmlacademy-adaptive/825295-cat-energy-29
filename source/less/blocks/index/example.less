@@ -3,11 +3,11 @@
   position: relative;
 
   @media (min-width: @tablet-width) {
-    background: linear-gradient(#ffffff 57%, #eaeaea 57%);
+    background: linear-gradient(to top, #eaeaea 462px, #ffffff 462px, #ffffff 100%);
   }
 
   @media (min-width: @desktop-width) {
-    background: linear-gradient(#ffffff 23%, #f2f2f2 23%);
+    background: linear-gradient(to bottom, #ffffff 137px, #f2f2f2 137px, #f2f2f2 100%);
   }
 }
 
@@ -74,7 +74,7 @@
   @media (min-width: @tablet-width) {
     justify-content: normal;
     gap: 43px;
-    margin-bottom: 99px;
+    margin-bottom: 250px;
   }
 
   @media (min-width: @desktop-width) {
@@ -88,46 +88,8 @@
   flex-direction: column;
   padding: 14px 14px 0 14px;
   position: relative;
-
-  &::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: calc(100% - 14px);
-    width: 100%;
-    border: 1px solid #cdcdcd;
-    border-radius: 10px;
-  }
-
-  &::after {
-    content: "";
-    position: absolute;
-    bottom: 14px;
-    left: 50%;
-    transform: translateX(-50%);
-    height: 1px;
-    width: 80%;
-    background-color: #eaeaea;
-  }
-
-  @media (min-width: @tablet-width) {
-    &::before {
-
-      height: calc(100% - 5px);
-    }
-
-    &::after {
-      background-color: #ffffff;
-      bottom: 5px;
-    }
-  }
-
-  @media (min-width: @desktop-width) {
-    &::after {
-      background-color: #f2f2f2;
-    }
-  }
+  border: 1px solid #cdcdcd;
+  border-radius: 3px;
 }
 
 .example__property {
@@ -137,10 +99,19 @@
   line-height: 12px;
   position: relative;
   z-index: 1;
+  background-color: #eaeaea;
+  padding: 0 5px;
+  top: 15px;
+  margin-top: -15px;
 
   @media (min-width: @tablet-width) {
     font-size: 14px;
     line-height: 14px;
+    background-color: #ffffff;
+  }
+
+  @media (min-width: @desktop-width) {
+    background-color: #f2f2f2;
   }
 }
 

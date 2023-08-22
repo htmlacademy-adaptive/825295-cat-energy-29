@@ -1,12 +1,11 @@
 .example-images {
   position: relative;
   min-height: 256px;
+  max-width: 560px;
   display: flex;
+  justify-content: center;
   z-index: 1;
-
-  @media (min-width: @tablet-width) {
-    justify-content: center;
-  }
+  margin: 0 auto;
 }
 
 .example-image__button {
@@ -32,5 +31,12 @@
     background-color: #666666;
     border-radius: 2px;
     z-index: 2;
+  }
+}
+
+.example-images__image {
+  @media (min-width: @tablet-width) {
+    width: 560px;
+    height: 512px;
   }
 }

@@ -13,9 +13,9 @@
     position: absolute;
     top: 0;
     left: 50%;
-    transform: translateX(-50%);
     width: 2px;
     height: 30px;
+    transform: translateX(-50%);
     background-color: #d3d3d3;
   }
 
@@ -24,9 +24,24 @@
     position: absolute;
     top: 15px;
     left: 50%;
-    transform: translateX(-50%);
     width: 30px;
     height: 2px;
+    transform: translateX(-50%);
     background-color: #d3d3d3;
+  }
+
+  @media (min-width: @tablet-width) {
+    padding-top: 110px;
+
+    &::before {
+      width: 2px;
+      height: 60px;
+    }
+
+    &::after {
+      width: 60px;
+      height: 2px;
+      top: 30px;
+    }
   }
 }

@@ -21,6 +21,10 @@
     line-height: 60px;
     margin-bottom: 72px;
   }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 32px;
+  }
 }
 
 .features__list {
@@ -53,6 +57,8 @@
 
   @media (min-width: @tablet-width) {
     padding: 151px 26px 57px 0;
+    font-size: 16px;
+    line-height: 24px;
 
     &::after {
       counter-increment: counter;
