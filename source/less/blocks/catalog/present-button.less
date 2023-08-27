@@ -12,6 +12,20 @@
   background-color: #68b738;
   position: relative;
 
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
+
+  &:disabled {
+    cursor: default;
+    opacity: 0.3;
+    pointer-events: none;
+  }
+
   @media (min-resolution: 2dppx) {
     background-image: url("../img/present-button-mobile@2x.png");
     background-size: cover;

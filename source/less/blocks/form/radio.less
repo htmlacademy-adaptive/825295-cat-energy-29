@@ -1,0 +1,52 @@
+.radio:focus-visible + .radio--custom::before {
+  outline: 1px solid #444444;
+}
+
+.radio--custom {
+  width: max-content;
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+
+  &::before {
+    content: "";
+    position: relative;
+    display: inline-block;
+    top: 0;
+    left: 0;
+    border: 1px solid #cdcdcd;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+  }
+
+  @media (min-width: @tablet-width) {
+    &::before {
+      width: 40px;
+      height: 40px;
+    }
+  }
+
+  &:hover {
+    &::before {
+      border-color: #bababa;
+    }
+  }
+}
+
+.radio:disabled + .radio--custom {
+  opacity: 0.3;
+  border-color: #cdcdcd;
+}
+
+.radio:checked + .radio--custom::before {
+  background-image: url("../img/radio-checked.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 12px 12px;
+
+  @media (min-width: @tablet-width) {
+    background-size: 18px 18px;
+  }
+}

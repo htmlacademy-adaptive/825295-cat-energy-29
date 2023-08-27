@@ -52,7 +52,9 @@
   &--gain::before {
     width: 67px;
     height: 50px;
-    background-image: url("../img/cat-gain.svg");
+    background-image: url("../img/cat-gain-tablet.svg");
+    background-size: 100% auto;
+    transform: scale(1);
   }
 
   @media (min-width: @tablet-width) {
@@ -142,6 +144,16 @@
     height: 10px;
     background-image: url("../img/weight-arrow.svg");
     background-repeat: no-repeat;
+  }
+
+  &:hover {
+    &::after {
+      transform: scaleX(1.1);
+    }
+  }
+
+  &:active {
+    opacity: 0.3;
   }
 
   @media (min-width: @tablet-width) {

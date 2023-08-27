@@ -1,12 +1,12 @@
 .catalog__wrapper {
-  padding: 27px 0 35px 0;
+  margin-bottom: 25px;
 
   @media (min-width: @tablet-width) {
-    padding: 67px 0 75px 0;
+    margin-bottom: 70px;
   }
 
-  @media (min-width: @desktop-width) {
-    padding: 74px 0 87px 0;
+  @media (min-width: @tablet-width) {
+    margin-bottom: 75px;
   }
 }
 
@@ -23,9 +23,10 @@
   }
 }
 
-.catalog__show-more-button {
+.catalog__show-more {
   margin: 0 auto 8px auto;
   display: block;
+  width: max-content;
 
   @media (min-width: @tablet-width) {
     margin-bottom: 23px;
@@ -59,8 +60,12 @@
 }
 
 .catalog__buttons-wrapper {
-  padding: 25px 0 25px 0;
+  padding: 78px 0 25px 0;
   position: relative;
+  background-image: url("../img/sprite.svg#plus-icon");
+  background-repeat: no-repeat;
+  background-position: top 25px left 50%;
+  background-size: 30px 30px;
 
   &::before {
     content: "";
@@ -83,8 +88,10 @@
   }
 
   @media (min-width: @tablet-width) {
-    padding: 50px 37px 40px 37px;
+    padding: 160px 37px 40px 37px;
     border: 1px solid #ebebeb;
+    background-size: 60px 60px;
+    background-position: top 50px left 50%;
 
     &::before,
     &::after {

@@ -94,26 +94,20 @@
   padding: 22px 55px 24px 54px;
   position: relative;
 
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+
   @media (min-width: @tablet-width) {
     padding: 0;
     font-size: 18px;
     line-height: 24px;
-  }
 
-  @media (min-width: @desktop-width) {
-    padding: 0;
-    font-size: 20px;
-    line-height: normal;
-  }
-
-  &--index {
-    @media (min-width: @desktop-width) {
-      color: #ffffff;
-    }
-  }
-
-  &--active {
-    @media (min-width: @tablet-width) {
+    &--active {
       &::after {
         content: "";
         position: absolute;
@@ -126,8 +120,16 @@
     }
   }
 
-  &--active-white {
-    @media (min-width: @desktop-width) {
+  @media (min-width: @desktop-width) {
+    padding: 0;
+    font-size: 20px;
+    line-height: normal;
+
+    &--index {
+      color: #ffffff;
+    }
+
+    &--active-white {
       &::after {
         content: "";
         position: absolute;
