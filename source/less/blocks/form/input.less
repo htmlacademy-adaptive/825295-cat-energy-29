@@ -5,6 +5,26 @@
   color: #444444;
   font-size: 16px;
   line-height: 18px;
+
+  &:hover {
+    border-color: #cdcdcd;
+  }
+
+  &:focus {
+    border-color: #444444;
+  }
+
+  &--error {
+    border-color: #ff8282;
+
+    &:hover {
+      border-color: #ff8282;
+    }
+  }
+
+  &--error + .program-form__input-icon {
+    background-color: #ff8282;
+  }
 }
 
 .input:placeholder-shown {

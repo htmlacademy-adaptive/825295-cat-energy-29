@@ -1,0 +1,113 @@
+.slider {
+  position: relative;
+  height: 256px;
+  width: 280px;
+  display: flex;
+  justify-content: center;
+  z-index: 1;
+
+  @media (min-width: @tablet-width) {
+    width: 560px;
+    height: 512px;
+  }
+}
+
+.slider__button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 40px;
+  height: 40px;
+  background-color: #ffffff;
+  border-radius: 50%;
+  border: 2px solid #666666;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: -110px;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 256px;
+    width: 4px;
+    background: linear-gradient(to bottom, #666666 110px, #ffffff 108px, #ffffff 146px, #666666 146px);
+    border-radius: 2px;
+    z-index: -1;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 10px;
+    left: 7px;
+    width: 24px;
+    height: 18px;
+    mask-image: url("../img/example-button-arrows.svg");
+    background-color: #666666;
+  }
+
+  @media (min-width: @tablet-width) {
+    &::before {
+      height: 512px;
+      top: -220px;
+      background: linear-gradient(to bottom, #666666 220px, #ffffff 219px, #ffffff 256px, #666666 257px);
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    &::before {
+      background: linear-gradient(to bottom, #666666 220px, #ffffff 219px, #ffffff 258px, #666666 258px);
+    }
+  }
+
+  &:hover {
+    border-color: #68b738;
+
+    &::before {
+      background: linear-gradient(to bottom, #68b738 110px, #ffffff 108px, #ffffff 146px, #68b738 146px);
+    }
+
+    &::after {
+      background-color: #68b738;
+    }
+
+    @media (min-width: @tablet-width) {
+      &::before {
+        background: linear-gradient(to bottom, #68b738 220px, #ffffff 219px, #ffffff 256px, #68b738 257px);
+      }
+    }
+
+    @media (min-width: @desktop-width) {
+      &::before {
+        background: linear-gradient(to bottom, #68b738 220px, #ffffff 219px, #ffffff 258px, #68b738 258px);
+      }
+    }
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
+
+  &:disabled {
+    cursor: default;
+    opacity: 0.3;
+    pointer-events: none;
+  }
+}
+
+.slider__image {
+  height: 256px;
+  object-fit: cover;
+  width: 100%;
+  object-position: left;
+
+  &--slim {
+    object-position: right;
+  }
+
+  @media (min-width: @tablet-width) {
+    width: 560px;
+    height: 512px;
+  }
+}

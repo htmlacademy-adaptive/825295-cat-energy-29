@@ -1,19 +1,29 @@
 .social {
   display: flex;
   align-items: center;
-  justify-content: center;
   flex-wrap: wrap;
-  column-gap: 24px;
-  row-gap: 12px;
-  width: 100%;
-  padding: 20px 74px;
-  border-top: 1px solid #d9d9d9;
-  border-bottom: 1px solid #d9d9d9;
+  column-gap: 14px;
+  row-gap: 14px;
+  width: 112px;
+  margin: 0 auto;
+}
 
-  @media (min-width: @tablet-width) {
-    border: none;
-    width: 132px;
-    padding: 0;
+.social__link {
+  display: inline-block;
+  width: 28px;
+  height: 22px;
+  fill: #666666;
+
+  &:hover {
+    fill: #68b738;
+  }
+
+  &:active {
+    opacity: 0.3;
   }
 }
 
+.social__link svg {
+  width: 28px;
+  height: 22px;
+}

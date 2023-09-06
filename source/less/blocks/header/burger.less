@@ -3,25 +3,22 @@
   height: 24px;
   padding: 2px 0 4px 0;
   position: relative;
-  transition: 0.3s all linear;
 }
 
 .burger:not(.burger--active) {
   &::before {
     content: "";
     position: absolute;
-    top: 2px;
-    left: 0;
-    width: 100%;
+    top: 0;
+    right: 1px;
+    width: 24px;
     height: 2px;
     background-color: #000000;
-    box-shadow: 0 6px 0 0 #000000, 0 12px 0 0 #000000;
+    box-shadow: 0 8px 0 0#000000, 0 16px 0 0#000000;
   }
 }
 
 .burger--active {
-  position: relative;
-
   &::before {
     content: "";
     width: 2px;
@@ -43,4 +40,24 @@
     background-color: #000000;
     transform: rotate(-45deg);
   }
+}
+
+.burger:hover {
+  &::before,
+  &::after {
+    opacity: 0.3;
+  }
+}
+
+.burger:active {
+  &::before,
+  &::after {
+    opacity: 0.1;
+  }
+}
+
+.burger:disabled {
+  opacity: 0.3;
+  cursor: default;
+  pointer-events: none;
 }

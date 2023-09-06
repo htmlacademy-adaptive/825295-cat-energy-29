@@ -52,7 +52,9 @@
   &--gain::before {
     width: 67px;
     height: 50px;
-    background-image: url("../img/cat-gain.svg");
+    background-image: url("../img/cat-gain-tablet.svg");
+    background-size: 100% auto;
+    transform: scale(1);
   }
 
   @media (min-width: @tablet-width) {
@@ -140,8 +142,19 @@
     right: 0;
     width: 32px;
     height: 10px;
-    background-image: url("../img/weight-arrow.svg");
+    background-image: url("../img/sprite.svg#weight-arrow");
     background-repeat: no-repeat;
+    transition: background 0.3s ease;
+  }
+
+  &:hover {
+    &::after {
+      background-image: url("../img/sprite.svg#weight-arrow-hover");
+    }
+  }
+
+  &:active {
+    opacity: 0.3;
   }
 
   @media (min-width: @tablet-width) {

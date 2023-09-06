@@ -4,10 +4,31 @@
   font-size: 16px;
   line-height: 20px;
   display: flex;
-  align-items: center;
-  flex-wrap: wrap;
-  justify-content: space-between;
   color: #444444;
+  position: relative;
+  padding-right: 50px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 27px;
+    height: 34px;
+    mask-image: url("../img/htmlacademy.svg");
+    background-repeat: no-repeat;
+    background-color: #666666;
+  }
+
+  &:hover {
+    &::before {
+      background-color: #68b738;
+    }
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 
   @media (min-width: @tablet-width) {
     gap: 23px;
