@@ -9,12 +9,12 @@
   &::before {
     content: "";
     position: absolute;
-    top: 2px;
-    right: 0;
+    top: 0;
+    right: 1px;
     width: 24px;
     height: 2px;
     background-color: #000000;
-    box-shadow: 0 6px 0 0 #000000, 0 12px 0 0 #000000;
+    box-shadow: 0 8px 0 0#000000, 0 16px 0 0#000000;
   }
 }
 
@@ -42,20 +42,6 @@
   }
 }
 
-// .burger--noscript {
-//   width: calc(100% + 20px);
-//   position: absolute;
-//   right: 20px;
-//   top: 0;
-// }
-
-// .burger--noscript:focus-within + .navigation__list {
-//   display: block;
-//   width: calc(100% + 20px);
-//   top: 52px;
-//   margin: 0;
-// }
-
 .burger:hover {
   &::before,
   &::after {
@@ -71,7 +57,7 @@
 }
 
 .burger:disabled {
-  opacity: 0.1;
+  opacity: 0.3;
   cursor: default;
   pointer-events: none;
 }
