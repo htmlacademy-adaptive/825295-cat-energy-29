@@ -1,11 +1,11 @@
 .additional-card {
   border-top: 1px solid #cdcdcd;
-  padding: 13px 0 19px 0;
+  padding: 13px 0 17px 0;
 
   @media (min-width: @tablet-width) {
     border: 1px solid#cdcdcd;
     border-bottom: none;
-    padding: 26px 40px 28px 38px;
+    padding: 26px 37px 27px 37px;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -13,7 +13,7 @@
 
   @media (min-width: @desktop-width) {
     align-items: center;
-    padding: 25px 0 24px 0;
+    padding: 14px 0 17px 0;
   }
 
   &:last-of-type {
@@ -31,10 +31,13 @@
 
   @media (min-width: @tablet-width) {
     margin-bottom: 25px;
+    font-size: 20px;
+    line-height: 1;
   }
 
   @media (min-width: @desktop-width) {
     margin-bottom: 0;
+    margin-right: 108px;
     width: 200px;
   }
 }
@@ -42,6 +45,29 @@
 .additional-card__text {
   font-family: "Lato", "Arial", sans-serif;
   line-height: 14px;
+
+  @media (min-width: @tablet-width) {
+    font-size: 16px;
+    line-height: 20px;
+
+    &--litres {
+      transform: translate(-8px, 1px);
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    &--litres {
+      transform: translate(0, 1px);
+    }
+
+    &--price-litres {
+      transform: translate(-8px, 3px);
+    }
+
+    &--price {
+      margin-right: 17px;
+    }
+  }
 }
 
 .additional-card__wrapper {
@@ -51,12 +77,13 @@
 
   @media (min-width: @tablet-width) {
     gap: 50px;
+    transform: translate(-4px, 1px);
   }
 
   @media (min-width: @desktop-width) {
     margin-bottom: 0;
     gap: 112px;
-    width: 300px;
+    width: 302px;
   }
 }
 

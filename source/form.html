@@ -17,7 +17,7 @@
 </head>
 
 <body>
-  <header class="header"><!-- Для показа навигации без js добавьте класс navigation--nojs -->
+  <header class="header">
     <nav class="navigation navigation--nojs"><a class="header__logo" href="index.html"
         aria-label="Перейти на главную страницу.">
         <picture>
@@ -28,7 +28,7 @@
         </picture>
       </a><button class="navigation__button burger burger--noscript button" type="button"><span
           class="visually-hidden">Меню.</span></button>
-      <ul class="navigation__list list">
+      <ul class="navigation__list navigation__list--notindex list">
         <li class="navigation__item"><a class="navigation__link" href="index.html">Главная</a></li>
         <li class="navigation__item"><a class="navigation__link" href="catalog.html">Каталог
             продукции</a></li>
@@ -39,7 +39,7 @@
   </header>
   <main class="main">
     <section class="program">
-      <div class="wrapper">
+      <div class="program__wrapper wrapper">
         <h1 class="program__main-title">Подбор программы</h1>
         <p class="program__description">Заполните анкету, и мы подберем<br>программу питания для вашего кота</p>
       </div>
@@ -51,7 +51,7 @@
                 class="program-form__input program-form__input--name input" type="text" name="name" placeholder="Барсик"
                 required></label> <label class="program-form__label weight-label">Вес (кг):* <input
                 class="program-form__input program-form__input--weight input" type="text" name="weight" placeholder="7"
-                required></label> <label class="program-form__label age-label">Возраст (лет): <input
+                required></label> <label class="program-form__label program-form__label--age"><span class="program-form__label-age">Возраст (лет):</span><input
                 class="program-form__input program-form__input--age input" type="text" name="age"
                 placeholder="7"></label>
           </fieldset>
@@ -70,26 +70,27 @@
         </div>
         <fieldset class="program-form__fieldset program-form__fieldset--contacts">
           <div class="wrapper wrapper--contacts">
-            <legend class="program-form__title program-form__title--contacts owner-contacts__title line">Контактные
-              данные<br>(владельца кота)</legend>
+            <legend class="program-form__title program-form__title--contacts owner-contacts__title">Контактные
+              данные<br><span class="program-form__owner">(владельца кота)</span></legend>
             <!-- Для показа состояния ошибки у input добавьте класс input--error -->
-            <label class="program-form__label program-form__label--email">
+            <label class="program-form__label program-form__label--contacts program-form__label--contacts-email">
               E-mail:*
-              <input class="program-form__input program-form__input--email input" type="email" name="email"
-                placeholder="kuklachev@gmail.com" required>
+              <input class="program-form__input program-form__input--contacts program-form__input--contacts-email input"
+                type="email" name="email" placeholder="kuklachev@gmail.com" required>
+              <span class="program-form__input-icon program-form__input-icon--email"></span>
             </label>
-            <label class="program-form__label program-form__label--phone">
+            <label class="program-form__label program-form__label--contacts program-form__label--contacts-phone">
               Телефон:*
-              <input class="program-form__input program-form__input--phone input" type="tel" name="tel"
-                placeholder="8 (960) 900-60-90" required>
+              <input class="program-form__input program-form__input--contacts program-form__input--contacts-phone input"
+                type="tel" name="tel" placeholder="8 (960) 900-60-90" required>
+              <span class="program-form__input-icon program-form__input-icon--phone"></span>
             </label>
           </div>
         </fieldset>
         <fieldset class="program-form__fieldset program-form__fieldset--comment">
-          <div class="wrapper">
-            <legend class="program-form__title program-form__title--comment line">Комментарий</legend><textarea
-              class="program-form__textarea input" name="text"
-              placeholder="Расскажите обо всех повадках кота"></textarea>
+          <div class="wrapper wrapper--textarea">
+            <legend class="program-form__title program-form__title--comment">Комментарий</legend>
+            <textarea class="program-form__textarea input" name="text" placeholder="Расскажите обо всех повадках кота"></textarea>
           </div>
         </fieldset>
         <fieldset class="program-form__fieldset program-form__fieldset--additional additional">
@@ -120,34 +121,35 @@
     </section>
     <section class="partnership">
       <div class="partnership__wrapper wrapper">
-        <div class="partnership__content">
+        <div class="partnership__content partnership__content--form">
           <h2 class="partnership__title">Приглашаем<br>к сотрудничеству<br>дилеров!</h2>
-          <address class="partnership__address">ул. Большая<br>Конюшенная, д. 19/8<br>Санкт-Петербург</address>
+          <address class="partnership__address">ул. Большая<br>Конюшенная, д. 19/8<br><span class="partnership__saint">Санкт-Петербург</span></address>
         </div>
       </div>
       <div class="partnership__map-container">
-        <noscript class="partnership__noscript">
-          <!-- <picture>
+        <noscript>
+          <picture>
             <source type="image/webp" media="(min-width: 1440px)"
-              srcset="img/partnership-map-desktop.webp, img/partnership-map@2x.webp 2x">
+              srcset="img/partnership-map-desktop.webp, img/partnership-map-desktop@2x.webp 2x">
             <source type="image/webp" media="(min-width: 768px)"
-              srcset="img/partnership-map-tablet.webp, img/partnership-map@2x.webp 2x">
+              srcset="img/partnership-map-tablet.webp, img/partnership-map-tablet@2x.webp 2x">
+
             <source type="image/png" media="(min-width: 1440px)"
               srcset="img/partnership-map-desktop.png, img/partnership-map-desktop@2x.png 2x">
             <source type="image/png" media="(min-width: 768px)"
               srcset="img/partnership-map-tablet.png, img/partnership-map-tablet@2x.png 2x">
-            <img class="partnership__noscript-image" src="img/partnership-map.png" srcset="img/partnership-map@2x.png 2x"
-              width="320" height="362" alt="Местоположение офиса по адресу ул. Большая
-        Конюшенная, д. 19/8
-        Санкт-Петербург">
-          </picture> -->
+            <img class="partnership__noscript-image" src="img/partnership-map.png"
+              srcset="img/partnership-map@2x.png 2x" width="320" height="362" alt="Местоположение офиса по адресу ул. Большая
+            Конюшенная, д. 19/8
+            Санкт-Петербург">
+          </picture>
         </noscript>
         <iframe class="map map--noscript"
           src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1998.6037861610246!2d30.3230474!3d59.9387165!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca3de3a1%3A0xba80b1be36549aba!2sHtml%20Academy!5e0!3m2!1sru!2sru!4v1691927678439!5m2!1sru!2sru"
           width="320" height="362" style="border:0;" allowfullscreen="" loading="lazy"
           referrerpolicy="no-referrer-when-downgrade" title="Местоположение офиса по адресу ул. Большая
-    Конюшенная, д. 19/8
-    Санкт-Петербург">
+        Конюшенная, д. 19/8
+        Санкт-Петербург">
         </iframe>
       </div>
     </section>
@@ -160,28 +162,18 @@
           <li class="social__item">
             <a class="social__link social__link--vk" href="#" target="_blank">
               <span class="visually-hidden">Cat Energy во Вконтакте.</span>
-              <svg>
-                <use href="img/sprite.svg#vk-icon"></use>
-              </svg>
             </a>
           </li>
           <li class="social__item">
             <a class="social__link social__link--youtube" href="#" target="_blank">
               <span class="visually-hidden">Cat Energy на Ютубе.</span>
-              <svg>
-                <use href="img/sprite.svg#youtube-icon"></use>
-              </svg>
             </a>
           </li>
           <li class="social__item">
             <a class="social__link social__link--tg" href="#" target="_blank">
-              <span
-                class="visually-hidden">Cat Energy в Телеграмме.</span>
-                <svg>
-                  <use href="img/sprite.svg#tg-icon"></use>
-                </svg>
-              </a>
-            </li>
+              <span class="visually-hidden">Cat Energy в Телеграмме.</span>
+            </a>
+          </li>
         </ul>
       </div><a class="footer__academy-link academy-link" href="https://htmlacademy.ru/intensive/adaptive"
         target="_blank" aria-label="Перейти на сайт HTML Academy.">HTML Academy <span class="visually-hidden">Логотип

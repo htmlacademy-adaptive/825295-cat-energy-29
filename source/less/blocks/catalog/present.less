@@ -31,8 +31,10 @@
   }
 
   @media (min-width: @tablet-width) {
-    padding: 185px 42px 43px 42px;
+    padding: 70px 42px 43px 421px;
     background-image: url("../img/present-button-tablet.png");
+    min-height: 200px;
+    text-align: left;
 
     @media (min-resolution: 2dppx) {
       background-image: url("../img/present-button-tablet@2x.png");
@@ -40,7 +42,7 @@
 
     &::before {
       top: 57px;
-      left: 78px;
+      left: 119px;
       width: 80px;
       height: 83px;
     }
@@ -48,6 +50,9 @@
 
   @media (min-width: @desktop-width) {
     background-image: url("../img/present-button-desktop.png");
+    padding: 70px 42px 43px 204px;
+    min-height: 288px;
+    text-align: center;
 
     &::before {
       top: 56px;
@@ -58,5 +63,23 @@
       background-image: url("../img/present-button-desktop@2x.png");
       background-size: cover;
     }
+  }
+}
+
+.present__text {
+  position: absolute;
+  top: 186px;
+  left: 50%;
+  transform: translateX(-50%);
+  margin: 0;
+
+  @media (min-width: @tablet-width) {
+    top: 70px;
+    left: 71%;
+  }
+
+  @media (min-width: @desktop-width) {
+    top: 186px;
+    left: 50%;
   }
 }

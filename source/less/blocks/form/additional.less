@@ -3,6 +3,8 @@
 
   @media (min-width: @tablet-width) {
     margin-bottom: 57px;
+    font-size: 36px;
+    line-height: 1;
   }
 }
 
@@ -13,18 +15,21 @@
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
-  gap: 15px;
+  gap: 12px;
+  margin-bottom: 34px;
 
   @media (min-width: @tablet-width) {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 32px 123px;
+    gap: 32px 20px;
+    margin-bottom: 53px;
   }
 
   @media (min-width: @desktop-width) {
     display: flex;
     gap: 32px 104px;
     flex-direction: row;
+    margin-bottom: 61px;
   }
 }
 
@@ -41,4 +46,9 @@
   gap: 17px;
   font-size: 16px;
   text-transform: uppercase;
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: normal;
+  }
 }

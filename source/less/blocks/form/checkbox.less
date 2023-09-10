@@ -6,7 +6,7 @@
   width: max-content;
   display: flex;
   align-items: center;
-  gap: 20px;
+  gap: 15px;
   position: relative;
 
   &::before {
@@ -18,16 +18,20 @@
     top: 0;
     left: 0;
     border: 1px solid #cdcdcd;
-
-    @media (min-width: @tablet-width) {
-      width: 40px;
-      height: 40px;
-    }
   }
 
   &:hover {
     &::before {
       border-color: #bababa;
+    }
+  }
+
+  @media (min-width: @tablet-width) {
+    gap: 20px;
+
+    &::before {
+      width: 40px;
+      height: 40px;
     }
   }
 }

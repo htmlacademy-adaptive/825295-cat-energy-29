@@ -19,7 +19,7 @@
   @media (min-width: @tablet-width) {
     font-size: 60px;
     line-height: 60px;
-    margin-bottom: 72px;
+    margin-bottom: 33px;
   }
 
   @media (min-width: @desktop-width) {
@@ -34,18 +34,18 @@
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
-  gap: 26px;
+  gap: 20px;
 
   @media (min-width: @tablet-width) {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    column-gap: 153px;
-    row-gap: 77px;
+    column-gap: 138px;
+    row-gap: 37px;
     counter-set: counter;
   }
 
   @media (min-width: @desktop-width) {
-    column-gap: 94px;
+    column-gap: 78px;
     grid-template-columns: 1fr 1fr 1fr 1fr;
   }
 }
@@ -55,8 +55,26 @@
   padding: 0 0 6px 80px;
   position: relative;
 
+  &::before {
+    content: "";
+    position: absolute;
+    top: -2px;
+    left: 0;
+    width: 60px;
+    height: 60px;
+    background-color: #68b738;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+
+    @media (min-width: @tablet-width) {
+      top: 40px;
+      width: 80px;
+      height: 80px;
+    }
+  }
+
   @media (min-width: @tablet-width) {
-    padding: 151px 26px 57px 0;
+    padding: 151px 0 57px 0;
     font-size: 16px;
     line-height: 24px;
 
@@ -65,7 +83,7 @@
       content: counter(counter);
       position: absolute;
       top: 0;
-      right: 0;
+      right: 18px;
       color: #f2f2f2;
       text-align: center;
       font-size: 280px;
@@ -73,110 +91,33 @@
       z-index: -1;
       width: 112px;
       height: 280px;
+      font-family: "Oswald", "Arial", sans-serif;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    &::after {
+      right: 21px;
     }
   }
 }
 
 .features__item--leaf::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 60px;
-  height: 60px;
-  background-color: #68b738;
-  background-image: url("../img/leaf-icon.svg");
-  background-repeat: no-repeat;
-  background-position: 50% 50%;
-
-  @media (min-width: @tablet-width) {
-    content: "";
-    position: absolute;
-    top: 40px;
-    left: 0;
-    width: 80px;
-    height: 80px;
-    background-color: #68b738;
-    background-image: url("../img/leaf-icon.svg");
-    background-repeat: no-repeat;
-    background-position: 50% 50%;
-  }
+  background-image: url("../img/stack.svg#leaf-icon");
+  background-size: 30px 32px;
 }
 
 .features__item--powder::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 60px;
-  height: 60px;
-  background-color: #68b738;
-  background-image: url("../img/powder-icon.svg");
-  background-repeat: no-repeat;
-  background-position: 50% 50%;
-
-  @media (min-width: @tablet-width) {
-    content: "";
-    position: absolute;
-    top: 40px;
-    left: 0;
-    width: 80px;
-    height: 80px;
-    background-color: #68b738;
-    background-image: url("../img/powder-icon.svg");
-    background-repeat: no-repeat;
-    background-position: 50% 50%;
-  }
+  background-image: url("../img/stack.svg#powder-icon");
+  background-size: 26px 29px;
 }
 
 .features__item--eat::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 60px;
-  height: 60px;
-  background-color: #68b738;
-  background-image: url("../img/eat-icon.svg");
-  background-repeat: no-repeat;
-  background-position: 50% 50%;
-
-  @media (min-width: @tablet-width) {
-    content: "";
-    position: absolute;
-    top: 40px;
-    left: 0;
-    width: 80px;
-    height: 80px;
-    background-color: #68b738;
-    background-image: url("../img/eat-icon.svg");
-    background-repeat: no-repeat;
-    background-position: 50% 50%;
-  }
+  background-image: url("../img/stack.svg#eat-icon");
+  background-size: 25px 30px;
 }
 
 .features__item--clock::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 60px;
-  height: 60px;
-  background-color: #68b738;
-  background-image: url("../img/clock-icon.svg");
-  background-repeat: no-repeat;
-  background-position: 50% 50%;
-
-  @media (min-width: @tablet-width) {
-    content: "";
-    position: absolute;
-    top: 40px;
-    left: 0;
-    width: 80px;
-    height: 80px;
-    background-color: #68b738;
-    background-image: url("../img/clock-icon.svg");
-    background-repeat: no-repeat;
-    background-position: 50% 50%;
-  }
+  background-image: url("../img/stack.svg#clock-icon");
+  background-size: 26px 31px;
 }
