@@ -15,15 +15,21 @@
   }
 
   @media (min-width: @tablet-width) {
-    padding: 0 37px 40px 37px;
+    padding: 164px 37px 40px;
     display: flex;
     flex-direction: column;
     background-color: #f2f2f2;
     min-height: 430px;
+    width: 324px;
 
     &::before {
       display: none;
     }
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 150px 37px 40px;
+    width: 245px;
   }
 }
 
@@ -149,19 +155,21 @@
 }
 
 .card__image-link {
-  @media (min-width: @tablet-width) {
-    margin-bottom: -12px;
+  transform: translate(1px, 3px);
 
-    &--large {
-      margin-bottom: -44px;
-    }
+
+  @media (min-width: @tablet-width) {
+    position: absolute;
+    top: -75px;
+    left: 60px;
   }
 
   @media (min-width: @desktop-width) {
-    margin-bottom: -26px;
+    left: 22px;
 
     &--large {
-      margin-bottom: -59px;
+      left: 35px;
+      top: -69px;
     }
   }
 }

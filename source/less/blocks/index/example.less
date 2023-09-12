@@ -126,7 +126,6 @@
 
     &--cost {
       left: -10px;
-      white-space: nowrap;
       width: 140px;
     }
   }
@@ -169,11 +168,6 @@
       position: absolute;
       right: -1px;
       bottom: -28px;
-
-      @media (min-width: @desktop-width) {
-        position: static;
-        margin-left: 62px;
-      }
     }
   }
 
@@ -181,6 +175,12 @@
     margin: 0 auto 0 0;
     font-size: 20px;
     line-height: 20px;
+    white-space: nowrap;
+
+    &--price {
+      position: static;
+      margin-left: 62px;
+    }
   }
 }
 

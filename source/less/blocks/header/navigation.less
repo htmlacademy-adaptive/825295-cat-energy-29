@@ -33,10 +33,11 @@
     margin: 0;
     position: static;
     background-color: transparent;
+    max-width: 440px;
   }
 
-  @media (min-width: @tablet-width) {
-    max-width: 630px;
+  @media (min-width: @desktop-width) {
+    max-width: 514px;
   }
 }
 
@@ -116,6 +117,11 @@
     padding: 0;
     font-size: 18px;
     line-height: 24px;
+    max-width: 153px;
+
+    &--first {
+      max-width: 64px;
+    }
 
     &--active {
       &::after {
@@ -135,6 +141,10 @@
     font-size: 20px;
     line-height: normal;
     max-width: 184px;
+
+    &--first {
+      max-width: 64px;
+    }
 
     &--index {
       color: #ffffff;

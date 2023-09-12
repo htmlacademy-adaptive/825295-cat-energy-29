@@ -16,7 +16,6 @@
   object-fit: cover;
   width: 68px;
   height: 86px;
-  transform: translateY(2px);
 
   &--medium {
     height: 78px;
@@ -25,22 +24,17 @@
   &--large {
     width: 84px;
     height: 100px;
-    transform: translate(1px, 3px);
   }
 
   @media (min-width: @tablet-width) {
-    width: 161px;
-    height: 172px;
-    transform: translate(-1px, -70px);
+    width: 200px;
+    height: 210px;
+  }
 
-    &--medium {
-      width: 163px;
-      height: 174px;
-    }
-
+  @media (min-width: @desktop-width) {
     &--large {
-      width: 168px;
-      height: 206px;
+      width: 172px;
+      height: 196px;
     }
   }
 }
