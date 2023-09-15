@@ -3,6 +3,10 @@
     display: grid;
     grid-template-columns: 1fr 245px;
     gap: 80px;
+
+    @media (min-width: @desktop-width) {
+      align-items: flex-start;
+    }
   }
 }
 
@@ -14,5 +18,13 @@
   @media (min-width: @desktop-width) {
     grid-column: 2 / 3;
     margin-top: 0;
+  }
+}
+
+.additional-list__first-column {
+  margin-bottom: 37px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 0;
   }
 }

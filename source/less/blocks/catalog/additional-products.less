@@ -7,10 +7,14 @@
     background-color: #68b738;
     height: 2px;
     width: 100%;
-    top: 14px;
+    top: 16px;
     left: 0;
     z-index: -1;
     transform: translateY(-50%);
+
+    @media (min-width: @tablet-width) {
+      top: 23px;
+    }
   }
 }
 
@@ -31,6 +35,8 @@
     margin: 0 0 80px 38px;
     padding: 0 40px 0 40px;
     transform: translateX(-40px);
+    font-size: 36px;
+    line-height: 1;
   }
 
   @media (min-width: @desktop-width) {

@@ -3,31 +3,35 @@
 }
 
 .checkbox--custom {
-  width: max-content;
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
-  gap: 20px;
+  padding-left: 45px;
+  padding-top: 5px;
   position: relative;
 
   &::before {
     content: "";
-    position: relative;
-    display: inline-block;
+    position: absolute;
     width: 30px;
     height: 30px;
     top: 0;
     left: 0;
     border: 1px solid #cdcdcd;
-
-    @media (min-width: @tablet-width) {
-      width: 40px;
-      height: 40px;
-    }
   }
 
   &:hover {
     &::before {
       border-color: #bababa;
+    }
+  }
+
+  @media (min-width: @tablet-width) {
+    padding-left: 60px;
+
+    &::before {
+      width: 40px;
+      height: 40px;
     }
   }
 }

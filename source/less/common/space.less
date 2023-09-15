@@ -1,0 +1,73 @@
+.space {
+  position: relative;
+
+  &::after {
+    content: "\a";
+    white-space: pre;
+  }
+}
+
+.space__features {
+  display: none;
+
+  @media (min-width: @tablet-width) {
+    display: inline;
+  }
+
+  &--price {
+    display: none;
+
+
+    @media (min-width: @tablet-width) {
+      display: inline;
+    }
+
+    @media (min-width: @desktop-width) {
+      display: none;
+    }
+  }
+}
+
+.space__example {
+  display: inline;
+
+  @media (min-width: @tablet-width) {
+    display: none;
+  }
+
+  &--result {
+    display: none;
+
+    @media (min-width: @desktop-width) {
+      display: inline;
+    }
+  }
+}
+
+.space__card--mobile {
+  display: inline;
+
+  @media (min-width: @tablet-width) {
+    display: none;
+  }
+}
+
+.space__card--tablet {
+  display: none;
+
+  @media (min-width: @tablet-width) {
+    display: inline;
+  }
+}
+
+.space__show-more {
+  display: none;
+
+  @media (min-width: @tablet-width) {
+    display: inline;
+  }
+}
+
+.space__present {
+  display: inline;
+}

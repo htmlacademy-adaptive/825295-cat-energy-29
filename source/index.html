@@ -17,7 +17,7 @@
 </head>
 
 <body class="page__body">
-  <header class="header"><!-- Для показа навигации без js добавьте класс navigation--nojs -->
+  <header class="header">
     <nav class="navigation navigation--nojs"><a class="header__logo" href="index.html"
         aria-label="Перейти на главную страницу.">
         <picture>
@@ -30,7 +30,7 @@
           class="visually-hidden">Меню.</span></button>
       <ul class="navigation__list list">
         <li class="navigation__item"><a
-            class="navigation__link navigation__link--index navigation__link--active navigation__link--active-white"
+            class="navigation__link navigation__link--index navigation__link--active navigation__link--active-white navigation__link--first"
             href="index.html">Главная</a></li>
         <li class="navigation__item"><a class="navigation__link navigation__link--index" href="catalog.html">Каталог
             продукции</a></li>
@@ -75,8 +75,8 @@
             залить<br>кипятком и готово.</li>
           <li class="features__item features__item--eat">Замените один-два приема<br>обычной еды на
             наше<br>функциональное питание.</li>
-          <li class="features__item features__item--clock">Уже через месяц наслаждайтесь<br>изменениями к
-            лучшему<br>вашего питомца!</li>
+          <li class="features__item features__item--clock">Уже через месяц наслаждайтесь изменениями к
+            лучшему<span class="space space__features"></span> вашего питомца!</li>
         </ul>
       </div>
     </section>
@@ -84,20 +84,22 @@
       <div class="example__wrapper wrapper">
         <h2 class="example__title">Живой пример</h2>
         <p class="example__description">Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy
-          Slim. Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по
+          Slim. Отличный результат<span class="space space__example--result"></span> без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по
           16 часов в день.</p>
         <ul class="example__list list">
           <li class="example__item"><span class="example__value">5 КГ </span><span
-              class="example__property">снижение<br>веса</span></li>
-          <li class="example__item"><span class="example__value">60 дней </span><span
-              class="example__property">затрачено<br>времени</span></li>
-          <li class="example__cost food-costs">Затраты на питание: 15 000 РУБ.</li>
+              class="example__property">снижение<span class="space space__example"></span> веса</span></li>
+          <li class="example__item">
+            <span class="example__value">60 дней </span>
+            <span class="example__property example__property--cost">затрачено <span class="space space__example"></span>времени</span>
+          </li>
+          <li class="example__cost food-costs">Затраты на питание:<span class="space space__features--price"></span> <span class="example__cost--price">15 000 РУБ.</span></li>
         </ul>
         <div class="example__slider slider">
           <picture>
             <source media="(min-width: 768px)"
-              srcset="img/example-fat-tablet-webp.webp, img/example-fat-tablet-webp@2x.webp 2x" type="image/webp"
-              width="560" height="512">
+              srcset="img/example-fat-tablet.webp, img/example-fat-tablet@2x.webp 2x" type="image/webp" width="560"
+              height="512">
             <source media="(min-width: 768px)" srcset="img/example-fat-tablet.png, img/example-fat-tablet@2x.png 2x"
               type="image/png" width="560" height="512">
             <img class="slider__image" src="img/example-fat-mobile.png" srcset="img/example-fat-mobile@2x.png 2x"
@@ -119,24 +121,26 @@
       <div class="partnership__wrapper wrapper">
         <div class="partnership__content">
           <h2 class="partnership__title">Приглашаем<br>к сотрудничеству<br>дилеров!</h2>
-          <address class="partnership__address">ул. Большая<br>Конюшенная, д. 19/8<br>Санкт-Петербург</address>
+          <address class="partnership__address">ул. Большая<br>Конюшенная, д. 19/8<br><span class="partnership__saint">Санкт-Петербург</span></address>
         </div>
       </div>
       <div class="partnership__map-container">
-        <noscript class="partnership__noscript">
-          <!-- <picture>
+        <noscript>
+          <picture>
             <source type="image/webp" media="(min-width: 1440px)"
-              srcset="img/partnership-map-desktop.webp, img/partnership-map@2x.webp 2x">
+              srcset="img/partnership-map-desktop.webp, img/partnership-map-desktop@2x.webp 2x">
             <source type="image/webp" media="(min-width: 768px)"
-              srcset="img/partnership-map-tablet.webp, img/partnership-map@2x.webp 2x">
+              srcset="img/partnership-map-tablet.webp, img/partnership-map-tablet@2x.webp 2x">
+
             <source type="image/png" media="(min-width: 1440px)"
               srcset="img/partnership-map-desktop.png, img/partnership-map-desktop@2x.png 2x">
             <source type="image/png" media="(min-width: 768px)"
               srcset="img/partnership-map-tablet.png, img/partnership-map-tablet@2x.png 2x">
-            <img class="partnership__noscript-image" src="img/partnership-map.png" srcset="img/partnership-map@2x.png 2x" width="320" height="362" alt="Местоположение офиса по адресу ул. Большая
+            <img class="partnership__noscript-image" src="img/partnership-map.png"
+              srcset="img/partnership-map@2x.png 2x" width="320" height="362" alt="Местоположение офиса по адресу ул. Большая
             Конюшенная, д. 19/8
             Санкт-Петербург">
-          </picture> -->
+          </picture>
         </noscript>
         <iframe class="map map--noscript"
           src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1998.6037861610246!2d30.3230474!3d59.9387165!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca3de3a1%3A0xba80b1be36549aba!2sHtml%20Academy!5e0!3m2!1sru!2sru!4v1691927678439!5m2!1sru!2sru"
@@ -156,25 +160,16 @@
           <li class="social__item">
             <a class="social__link social__link--vk" href="#" target="_blank">
               <span class="visually-hidden">Cat Energy во Вконтакте.</span>
-              <svg>
-                <use href="img/sprite.svg#vk-icon"></use>
-              </svg>
             </a>
           </li>
           <li class="social__item">
             <a class="social__link social__link--youtube" href="#" target="_blank">
               <span class="visually-hidden">Cat Energy на Ютубе.</span>
-              <svg>
-                <use href="img/sprite.svg#youtube-icon"></use>
-              </svg>
             </a>
           </li>
           <li class="social__item">
             <a class="social__link social__link--tg" href="#" target="_blank">
               <span class="visually-hidden">Cat Energy в Телеграмме.</span>
-              <svg>
-                <use href="img/sprite.svg#tg-icon"></use>
-              </svg>
             </a>
           </li>
         </ul>

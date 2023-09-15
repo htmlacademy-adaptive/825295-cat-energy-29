@@ -3,17 +3,17 @@
 }
 
 .radio--custom {
-  width: max-content;
+  max-width: 100%;
   position: relative;
   display: flex;
   align-items: center;
-  gap: 20px;
+  gap: 15px;
+  padding-left: 45px;
 
   &::before {
     content: "";
-    position: relative;
-    display: inline-block;
-    top: 0;
+    position: absolute;
+    top: -4px;
     left: 0;
     border: 1px solid #cdcdcd;
     border-radius: 50%;
@@ -22,6 +22,9 @@
   }
 
   @media (min-width: @tablet-width) {
+    gap: 19px;
+    padding-left: 59px;
+
     &::before {
       width: 40px;
       height: 40px;
