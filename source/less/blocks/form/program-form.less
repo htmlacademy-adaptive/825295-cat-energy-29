@@ -50,7 +50,7 @@
 
   @media (min-width: @tablet-width) {
     padding: 26px 27px 29px;
-    margin: 0 0 65px;
+    margin: 0 0 68px;
     border: 1px solid #d9d9d9;
     width: 628px;
     gap: 23px;
@@ -74,8 +74,8 @@
   gap: 9px;
 
   @media (min-width: @tablet-width) {
-    margin: 0 0 74px 0;
-    gap: 23px;
+    margin: 0 0 73px 0;
+    gap: 22px;
   }
 
   @media (min-width: @desktop-width) {
@@ -149,6 +149,10 @@
   gap: 11px;
   position: relative;
 
+  &--radio {
+    flex-wrap: wrap;
+  }
+
   @media (min-width: @tablet-width) {
     font-size: 20px;
     line-height: normal;
@@ -159,10 +163,6 @@
   @media (min-width: @desktop-width) {
     padding-right: 0;
   }
-}
-
-.program-form__label-age {
-  width: max-content;
 }
 
 .program-form__label--contacts-email {
@@ -199,6 +199,16 @@
   &--contacts-email {
     flex-grow: 1;
     max-width: calc(100% - 60px);
+    background-image: url("../img/stack.svg#email-icon");
+    background-size: 20px 20px;
+    background-position: top 14px right 11px;
+  }
+
+  &--contacts-phone {
+    background-image: url("../img/stack.svg#phone-icon");
+    background-size: 20px 20px;
+    background-position: top 12px right 10px;
+    min-width: 200px;
   }
 
   @media (min-width: @tablet-width) {
@@ -206,50 +216,14 @@
     height: 50px;
   }
 
-  &--contacts-phone {
-    min-width: 200px;
-  }
-}
-
-.program-form__input-icon {
-  position: absolute;
-  top: 15px;
-  width: 20px;
-  height: 20px;
-  background-color: #000000;
-
-  &--email {
-    mask-image: url("../img/stack.svg#email-icon");
-    right: 12px;
-  }
-
-  &--phone {
-    mask-image: url("../img/stack.svg#phone-icon");
-    right: 11px;
-    top: 14px;
-  }
-
-  @media (min-width: @tablet-width) {
-    &--email {
-      right: 54px;
-      top: 15px;
-    }
-
-    &--phone {
-      right: 52px;
-      top: 15px;
-    }
-  }
-
   @media (min-width: @desktop-width) {
-    &--email {
-      right: 15px;
-      top: 16px;
+    &--contacts-email {
+      background-size: 25px 21px;
+      background-position: top 15px right 12px;
     }
 
-    &--phone {
-      right: 14px;
-      top: 16px;
+    &--contacts-phone {
+      background-position: top 15px right 13px;
     }
   }
 }
@@ -279,6 +253,7 @@
   font-weight: 400;
   line-height: 26px;
   width: max-content;
+  max-width: 100%;
   background-color: #ffffff;
 
   @media (min-width: @tablet-width) {
@@ -302,6 +277,7 @@
     line-height: 1;
     display: flex;
     gap: 7px;
+    white-space: nowrap;
 
     br {
       display: none;

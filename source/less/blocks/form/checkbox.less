@@ -3,16 +3,16 @@
 }
 
 .checkbox--custom {
-  width: max-content;
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
-  gap: 15px;
+  padding-left: 45px;
+  padding-top: 5px;
   position: relative;
 
   &::before {
     content: "";
-    position: relative;
-    display: inline-block;
+    position: absolute;
     width: 30px;
     height: 30px;
     top: 0;
@@ -27,7 +27,7 @@
   }
 
   @media (min-width: @tablet-width) {
-    gap: 20px;
+    padding-left: 60px;
 
     &::before {
       width: 40px;
