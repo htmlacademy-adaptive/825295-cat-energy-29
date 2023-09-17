@@ -85,26 +85,22 @@
 
 .program-form__fieldset--contacts {
   margin: 0 0 19px 0;
+  gap: 0;
 
   @media (min-width: @tablet-width) {
     margin: 0 0 66px 0;
   }
 
+
   @media (min-width: @desktop-width) {
-    grid-column: 1 / -1;
-    display: flex;
-    flex-wrap: wrap;
-    margin-bottom: 0;
+    display: grid;
+    grid-template-columns: 570px 1fr;
+    column-gap: 80px;
+    margin-bottom: 73px;
   }
 }
 
 .program-form__fieldset--comment {
-  margin: 0 0 20px 0;
-
-  @media (min-width: @tablet-width) {
-    margin: 0 0 62px 0;
-  }
-
   @media (min-width: @desktop-width) {
     grid-column: 1 / -1;
     display: flex;
@@ -113,30 +109,33 @@
   }
 }
 
-.program-form__fieldset--contacts,
-.program-form__fieldset--comment,
-.program-form__fieldset--additional {
-  &::after {
+.wrapper--contacts,
+.wrapper--textarea,
+.wrapper--additional {
+  &::before {
     content: "";
     position: absolute;
     background-color: #68b738;
     height: 2px;
     width: calc(100% + 40px);
     top: 17px;
-    left: -40px;
+    left: -20px;
     z-index: -1;
     transform: translateY(-50%);
   }
 
   @media (min-width: @tablet-width) {
-    &::after {
+    &::before {
       top: 23px;
+      left: -70px;
+      width: calc(100% + 100px);
     }
   }
 
   @media (min-width: @desktop-width) {
-    &::after {
-      top: 23px;
+    &::before {
+      left: -110px;
+      width: calc(100% + 220px);
     }
   }
 }
@@ -270,6 +269,7 @@
 .program-form__title--contacts {
   margin: 0 0 33px 0;
   position: relative;
+  white-space: pre;
 
   @media (min-width: @tablet-width) {
     margin: 0 0 76px 0;
@@ -277,7 +277,6 @@
     line-height: 1;
     display: flex;
     gap: 7px;
-    white-space: nowrap;
 
     br {
       display: none;
@@ -355,7 +354,7 @@
   margin: 0;
   color: #000000;
   text-align: center;
-  font-family: "Lato", sans-serif;
+  font-family: "Lato", "Arial", sans-serif;
   line-height: 16px;
   white-space: nowrap;
 

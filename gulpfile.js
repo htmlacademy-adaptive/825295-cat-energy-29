@@ -9,7 +9,6 @@ import rename from 'gulp-rename';
 import terser from 'gulp-terser';
 import squoosh from 'gulp-libsquoosh';
 import svgo from 'gulp-svgmin';
-// import svgstore from 'gulp-svgstore';
 import { stacksvg } from "gulp-stacksvg";
 import pkg from 'del';
 import browser from 'browser-sync';
@@ -49,13 +48,13 @@ return gulp.src('source/js/script.js')
 // Images
 
 export const optimizeImages = () => {
-return gulp.src('source/img/**/*.{png,jpg}')
+return gulp.src('source/img/**/*.{png,jpg,ico}')
 .pipe(squoosh())
 .pipe(gulp.dest('build/img'))
 }
 
 const copyImages = () => {
-return gulp.src('source/img/**/*.{png,jpg}')
+return gulp.src('source/img/**/*.{png,jpg,ico}')
 .pipe(gulp.dest('build/img'))
 }
 
@@ -76,15 +75,8 @@ gulp.src(['source/img/*.svg', '!source/img/icons/*.svg'])
 .pipe(svgo())
 .pipe(gulp.dest('build/img'));
 
-// export const sprite = () => {
-// return gulp.src('source/img/icons/*.svg')
-// .pipe(svgo())
-// .pipe(svgstore({
-// inlineSvg: true
-// }))
-// .pipe(rename('sprite.svg'))
-// .pipe(gulp.dest('build/img'));
-// }
+// Stack
+
 const { src, dest } = gulp
 
 function makeStack () {
