@@ -1,8 +1,8 @@
-.radio:focus-visible + .radio--custom::before {
+.radio:focus-visible + .radio__custom::before {
   outline: 1px solid #444444;
 }
 
-.radio--custom {
+.radio__custom {
   max-width: 100%;
   position: relative;
   display: flex;
@@ -38,12 +38,12 @@
   }
 }
 
-.radio:disabled + .radio--custom {
+.radio:disabled + .radio__custom {
   opacity: 0.3;
   border-color: #cdcdcd;
 }
 
-.radio:checked + .radio--custom::before {
+.radio:checked + .radio__custom::before {
   background-image: url("../img/radio-checked.svg");
   background-repeat: no-repeat;
   background-position: center;

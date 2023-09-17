@@ -21,21 +21,24 @@
 }
 
 .wrapper--contacts {
-  @media (min-width: @desktop-width) {
-    display: grid;
-    grid-template-columns: 570px 1fr;
-    column-gap: 80px;
-    margin-bottom: 73px;
-  }
+  position: relative;
 }
 
 .wrapper--textarea {
+  position: relative;
+  margin-bottom: 23px;
+
   @media (min-width: @tablet-width) {
     padding-right: 40px;
+    margin-bottom: 65px;
   }
 
   @media (min-width: @desktop-width) {
     padding-right: 0;
-    margin-bottom: 67px;
+    margin-bottom: 70px;
   }
+}
+
+.wrapper--additional {
+  position: relative;
 }

@@ -1,8 +1,8 @@
-.checkbox:focus-visible + .checkbox--custom::before {
+.checkbox:focus-visible + .checkbox__custom::before {
   outline: 1px solid #444444;
 }
 
-.checkbox--custom {
+.checkbox__custom {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
@@ -36,13 +36,13 @@
   }
 }
 
-.checkbox:checked + .checkbox--custom::before {
+.checkbox:checked + .checkbox__custom::before {
   background-image: url("../img/checkbox-checked.svg");
   background-repeat: no-repeat;
   background-position: center;
 }
 
-.checkbox:disabled + .checkbox--custom {
+.checkbox:disabled + .checkbox__custom {
   cursor: default;
   opacity: 0.3;
 }
