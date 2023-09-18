@@ -88,7 +88,6 @@ function makeStack() {
 }
 
 // Copy
-
 export const copy = (done) => {
   gulp.src([
     'source/fonts/**/*.{woff2,woff}',
